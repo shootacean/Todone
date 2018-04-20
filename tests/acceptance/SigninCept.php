@@ -1,6 +1,10 @@
 <?php 
 $I = new AcceptanceTester($scenario);
 $I->am('user');
-$I->wantTo('perform actions and see result');
+$I->wantTo('open sign in page.');
 $I->amOnPage("/");
-$I->see('Welcome to CodeIgniter!');
+$I->see('Sign In');
+$I->fillField('email', 'shootacean@gmail.com');
+$I->fillField('password', 'qwerty');
+$I->click('sign-in');
+$I->see('Welcome to Todone!');

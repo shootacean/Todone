@@ -7,6 +7,24 @@
 actor: AcceptanceTester
 modules:
     enabled:
-        - PhpBrowser:
-            url: http://localhost:9000/
+        - WebDriver:
+            url: http://localhost:9000
+            browser: chrome
         - \Helper\Acceptance
+env:
+    chrome:
+    phantom:
+         modules:
+            config:
+                WebDriver:
+                    browser: 'phantomjs'
+    firefox:
+         modules:
+            config:
+                WebDriver:
+                    browser: 'chrome'
+    safari:
+        modules:
+            config:
+                WebDriver:
+                    browser: 'safari'
