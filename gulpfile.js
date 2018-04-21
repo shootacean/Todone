@@ -19,7 +19,9 @@ gulp.task('sass', () => {
     return gulp.src(path.join(assetsPath, 'sass/main.scss'))
         .pipe(sourcemaps.init())
         .pipe(plumber())
-        .pipe(sass())
+        .pipe(sass({
+            includePaths: require('siimple').includePaths
+        }))
         .pipe(autoprefixer())
         .pipe(sourcemaps.write())
         .pipe(gulp.dest('public/css/'));

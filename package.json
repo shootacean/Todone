@@ -18,5 +18,8 @@
   },
   "path": {
     "assetsDir": "./assets/"
+  },
+  "dependencies": {
+    "materialize-css": "^1.0.0-beta"
   }
 }
